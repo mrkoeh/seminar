@@ -1,0 +1,41 @@
+Status =>	1. Registered
+			2. Approved   	=> Konfirmasi Pembayaran
+			3. Pending		=> Belum Konfirmasi Pembayaran
+			4. Block
+
+Absensi =>	0. Terdaftar	=> Sebatas Registrasi
+			1. Hadir		=> Harus approved dulu
+			2. Tidak Hadir
+			
+#KIRIM EMAIL
+1. buka file php.ini di xampp\php\
+	Ubah
+	[mail function]
+	SMTP = smtp.gmail.com
+	smtp_port = 587
+	sendmail_from = emailanda@gmail.com
+	sendmail_path = "\"D:\xampp\sendmail\sendmail.exe\" -t"
+	
+2. buka file sendmail.ini di xampp\sendmail
+	#Lama
+	account Gmail
+	tls on
+	tls_certcheck off
+	host smtp.gmail.com
+	from emailanda@gmail.com
+	auth on
+	user emailanda@gmail.com
+	password passwordanda
+	port 587
+	account default : Gmail
+	
+	#Baru
+	smtp_server=smtp.gmail.com
+	smtp_port=587
+	smtp_ssl=auto
+	default_domain=gmail.com
+	auth_username=emailanda@gmail.com
+	auth_password=passwordanda
+
+3. restart apache dan mySQL 
+		
